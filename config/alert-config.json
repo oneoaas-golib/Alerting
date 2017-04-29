@@ -1,0 +1,7 @@
+{
+"Alert_definition_path": "/home/alerting/config/alert",
+"Alert_definition_reload_timeinsec": 60,
+"Alert_query_endpoint": "http://mqehost:1234/query?query=",
+"Alert_snooze_path": "/home/alerting/snooze",
+"Alert_log_path": "/home/alerting/log"
+}

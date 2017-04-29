@@ -1,0 +1,41 @@
+{
+ "alert_type":"Mail",
+ "def_team":"x@gmail.com, yy@yahoo.com",
+ "def_cluster":"demoapp",
+ "params":[
+   {
+      "alert_id":"0",
+      "enable":false,
+      "description":"xxx",
+      "frequency":"HOURLY(2)",
+      "query":"select os.cpu.all.idle_percentage | summarize.mean where app=\"demoapp\" from -1hr to now",
+      "operator": ">",
+      "threshold": 50,
+      "exclude_def_team": false,
+      "additional_team": "NULL"
+   },
+   {
+      "alert_id":"1",
+      "enable":true,
+      "description":"yyy",
+      "frequency":"HOURLY(10)",
+      "query":"select os.cpu.all.idle_percentage | summarize.mean where app=\"demoapp\" from -1hr to now",
+      "operator": "=",
+      "threshold": 0,
+      "exclude_def_team": false,
+      "additional_team": "NULL"
+   },
+   {
+      "alert_id":"2",
+      "enable":true,
+      "description":"zzz",
+      "frequency":"MIN(1)",
+      "query": "select os.cpu.all.idle_percentage | summarize.mean where app=\"demoapp\" from -1hr to now",
+      "operator":"=",
+      "threshold": 0,
+      "exclude_def_team": false,
+      "additional_team": "NULL"
+   }
+ ]
+}
+
