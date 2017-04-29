@@ -1,6 +1,6 @@
 
-## Alerting System in GO based on MQE( Metric Square Engine)
-Alerting system is based excuting alert query with  Metric Square Engine, which retrun result. And result value will be compared with threashold value, if it satisfies alert will be sent based on alert type. Gocron scheuler is used to schedule  alert defintion based alert config.
+# Alerting System in Go Lang 
+Alerting system, execute alert query with Metric Square Engine(MQE), which retrun result. Result value compared with threashold value, if it satisfies, alert will be sent based on alert type. Gocron scheduler is used to schedule alert defintion based alert config.
 ---
 
 ### for Building and Running
