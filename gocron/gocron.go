@@ -20,7 +20,7 @@
 package gocron
 
 import (
-//        "fmt"
+	//        "fmt"
 	"errors"
 	"reflect"
 	"runtime"
@@ -453,25 +453,25 @@ func (s *Scheduler) Remove(j interface{}) {
 }
 
 func (s *Scheduler) RemoveJob(j *Job) {
-     found := false
-     i := 0
-     for ;i < s.size; i++ {
-         if s.jobs[i] == j {
-            found = true
-            //fmt.Println("RemoveJob Match Found")
-            break
-         }
-     }
+	found := false
+	i := 0
+	for ; i < s.size; i++ {
+		if s.jobs[i] == j {
+			found = true
+			//fmt.Println("RemoveJob Match Found")
+			break
+		}
+	}
 
-     if found == true {
-       for k := (i + 1); k < s.size; k++ {
-         s.jobs[i] = s.jobs[k]
-         i++
-       }
+	if found == true {
+		for k := (i + 1); k < s.size; k++ {
+			s.jobs[i] = s.jobs[k]
+			i++
+		}
 
-       s.size = s.size - 1
-       j = nil
-     }
+		s.size = s.size - 1
+		j = nil
+	}
 }
 
 // Delete all scheduled jobs
